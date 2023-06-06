@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="text-center mt-5">
+        <form style="max-width: 480px; margin: auto;" action="" method="POST">
+          {% csrf_token %}
+            <img class="mt-4 mb-4" src="https://cdn.dribbble.com/users/4553005/screenshots/13436219/ecommerce_logo_3-01.png" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Please Signup</h1>
+            <input type="name" id="name" class="form-control mt-2" placeholder="Name" required autofocus name="name">
+            <input type="email" id="email" class="form-control mt-2" placeholder="Email Address" name="email">
+            <input type="password" id="password" class="form-control mt-2" placeholder="Password" name="password">
+            <input type="password" id="password_again" class="form-control mt-2" placeholder="Password Again" name="password_again">
+            <input type="address" id="address" class="form-control mt-2" placeholder="Address" name="address">
+            <div class="mt-3">
+                <button type="submit" class="btn btn-lg btn-primary btn-block">Signup</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
+{% endblock content %}
